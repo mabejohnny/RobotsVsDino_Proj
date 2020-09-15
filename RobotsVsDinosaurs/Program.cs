@@ -10,7 +10,7 @@ namespace RobotsVsDinosaurs
         static void Main(string[] args)
         {
             Battlefield newBattle = new Battlefield();
-            newBattle.mainMenu();
+            newBattle.MainMenu();
 
 
         }

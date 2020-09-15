@@ -8,8 +8,11 @@ namespace RobotsVsDinosaurs
     //member variables
     class Battlefield
     {
+        Herd herd = new Herd();
 
+        Fleet fleet = new Fleet();
 
+      
         //constructor
         public Battlefield()
         {
@@ -17,12 +20,14 @@ namespace RobotsVsDinosaurs
         }
 
 
-
-
-
         //member methods 
         public void MainMenu()
         {
+            herd.dinosaurs[0].AttackRobot(fleet.robot[0]);
+            
+          
+
+
             Console.WriteLine("Welcome To Dinosaur's Vs. Robot's!");
             Console.WriteLine("Please enter your name");
             string playersName = Console.ReadLine();
@@ -59,6 +64,8 @@ namespace RobotsVsDinosaurs
         {
 
         }
+
+       
     }
 
 }
