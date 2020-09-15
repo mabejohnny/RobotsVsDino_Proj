@@ -26,7 +26,10 @@ namespace RobotsVsDinosaurs
 
 
         //member methods
-
+        public void AttackRobot()
+        {
+            if()
+        }
       
 
 

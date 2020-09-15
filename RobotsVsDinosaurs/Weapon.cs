@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace RobotsVsDinosaurs
@@ -8,13 +9,14 @@ namespace RobotsVsDinosaurs
 
     class Weapon
     {
+        public string type;
 
 
         //constructor
-        public Weapon()
+        public Weapon(string type)
         {
 
-
+            this.type = type;
 
         }
 
