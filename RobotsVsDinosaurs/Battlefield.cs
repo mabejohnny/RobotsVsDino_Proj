@@ -37,16 +37,14 @@ namespace RobotsVsDinosaurs
                 case "1":
                     ReadTheRules();
                     break;
-
                 case "2":
                     PlayThreeRounds();
                     break;
-
                 case "3":
-                    MainMenu();
                     break;
-
                 default:
+                    Console.WriteLine("Error! Please try again");
+                    MainMenu();
                     break;
             }
         }
