@@ -90,12 +90,12 @@ namespace RobotsVsDinosaurs
                 if(dinoDeaths == 3)
                 {
                     Console.WriteLine("The entire herd of dinosaurs are extinct!");
-                    MainMenu();
+                    break;
                 }
                 if(robotDeaths == 3)
                 {
                     Console.WriteLine("I guess robots are not the future!");
-                    MainMenu();
+                    break;
                 }
 
             }
