@@ -9,7 +9,10 @@ namespace RobotsVsDinosaurs
     class Battlefield
     {
         Herd herd = new Herd();
-               Fleet fleet = new Fleet();
+        Fleet fleet = new Fleet();
+        public int dinoDeaths;
+        public int robotDeaths;
+
 
        
 
@@ -17,6 +20,8 @@ namespace RobotsVsDinosaurs
         //constructor
         public Battlefield()
         {
+            this.dinoDeaths = 0;
+            this.robotDeaths = 0;
 
         }
 
@@ -52,7 +57,8 @@ namespace RobotsVsDinosaurs
 
         public void ReadTheRules()
         {
-            
+            Console.WriteLine("There are no rules!");
+            MainMenu();
 
         }
 
@@ -72,16 +78,24 @@ namespace RobotsVsDinosaurs
                 if (herd.dinosaurs[0].health <= 0)
                 {
                     herd.dinosaurs.Remove(herd.dinosaurs[0]);
+                    dinoDeaths++;
                    
 
                 }
                 else if (fleet.robot[0].health <= 0)
                 {
-                    
+                    fleet.robot.Remove(fleet.robot[0]);
+                    robotDeaths++;
                 }
-                else
+                if(dinoDeaths == 3)
                 {
-                    
+                    Console.WriteLine("The entire herd of dinosaurs are extinct!");
+                    MainMenu();
+                }
+                if(robotDeaths == 3)
+                {
+                    Console.WriteLine("I guess robots are not the future!");
+                    MainMenu();
                 }
 
             }
