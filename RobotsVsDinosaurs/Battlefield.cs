@@ -9,10 +9,9 @@ namespace RobotsVsDinosaurs
     class Battlefield
     {
         Herd herd = new Herd();
-        Fleet fleet = new Fleet();
+               Fleet fleet = new Fleet();
 
-        int robotDeaths;
-        int dinoDeaths;
+       
 
       
         //constructor
@@ -32,6 +31,8 @@ namespace RobotsVsDinosaurs
             Console.WriteLine("Hello " + playersName + "\n" + "Enter: '1', for rules" + "\n" + "Enter: 2, to play" + "\n" + "Enter: 3, to quit" );
             string userInput = Console.ReadLine();
 
+            
+            
             switch (userInput)
             {
                 case "1":
@@ -61,21 +62,29 @@ namespace RobotsVsDinosaurs
         {
             Console.WriteLine("Let's get ready to rumble!!!" + "\n" + "Press 'enter' to begin");
             Console.ReadLine();
-            herd.dinosaurs[0].AttackRobot(fleet.robot[0]);
-            fleet.robot[0].AttackDinosaur(herd.dinosaurs[0]);
 
-            if (robotDeaths >= 3)
+            while (fleet.robot.Count > 0 || herd.dinosaurs.Count > 0)
             {
-                Console.WriteLine("The robot fleet is all gone! Thanks for playing");
+                herd.dinosaurs[0].AttackRobot(fleet.robot[0]);
+                fleet.robot[0].AttackDinosaur(herd.dinosaurs[0]);
+               
+
+                if (herd.dinosaurs[0].health <= 0)
+                {
+                    herd.dinosaurs.Remove(herd.dinosaurs[0]);
+                   
+
+                }
+                else if (fleet.robot[0].health <= 0)
+                {
+                    
+                }
+                else
+                {
+                    
+                }
 
             }
-            if (dinoDeaths >= 3)
-            {
-                Console.WriteLine("The dinosaur herd is all gone! Thanks for playing");
-            }
-
-
-
         }
 
        

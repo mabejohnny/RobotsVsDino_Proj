@@ -11,7 +11,7 @@ namespace RobotsVsDinosaurs
         public int powerLevel;
         public string weaponType;
         public int attackPower;
-        public int dinoDeaths;
+        
 
 
         //constructor
@@ -30,26 +30,13 @@ namespace RobotsVsDinosaurs
         //member methods
         public void AttackDinosaur(Dinosaur anyDino)
         {
-            for (int i = 0; i < 3; i++)
-            {
+           
+            
                 anyDino.health = anyDino.health - 25;
                 anyDino.attackPower = anyDino.attackPower - 10;
                 anyDino.energy = anyDino.energy - 10;
 
-                if (anyDino.health >= 0)
-                {
-                    Console.WriteLine(anyDino + " down!");
-                    dinoDeaths++;
-                }
-                else
-                {
-                    Console.WriteLine("No dinosaurs were killed!");
-
-                }
-                    
-
-            }
-         
+           
 
         }
 
