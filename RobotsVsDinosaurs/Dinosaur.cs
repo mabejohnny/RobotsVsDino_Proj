@@ -34,15 +34,12 @@ namespace RobotsVsDinosaurs
         //
 
 
-        // As a developer, I want a Robot to have the ability to attack a Dinosaur and a Dinosaur to have the ability to attack a Robot on a Battlefield.
-
-
-
+        
 
         public void AttackRobot(Robot anyRobot)
         {
             anyRobot.health = anyRobot.health - 25;
-            anyRobot.powerLevel = anyRobot.powerLevel - 25;
+            anyRobot.powerLevel = anyRobot.powerLevel - 10;
 
         }
     }

@@ -27,7 +27,13 @@ namespace RobotsVsDinosaurs
 
 
         //member methods
+        public void AttackDinosaur(Dinosaur anyDino)
+        {
+            anyDino.health = anyDino.health - 25;
+            anyDino.attackPower = anyDino.attackPower - 10;
+            anyDino.energy = anyDino.energy - 10;
 
+        }
 
     }
 
