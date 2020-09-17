@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection.Metadata;
+using System.Reflection.Metadata.Ecma335;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace RobotsVsDinosaurs
@@ -12,6 +14,7 @@ namespace RobotsVsDinosaurs
         Fleet fleet = new Fleet();
         public int dinoDeaths;
         public int robotDeaths;
+       
 
 
        
@@ -33,11 +36,9 @@ namespace RobotsVsDinosaurs
             Console.WriteLine("Welcome To Dinosaur's Vs. Robot's!");
             Console.WriteLine("Please enter your name");
             string playersName = Console.ReadLine();
-            Console.WriteLine("Hello " + playersName + "\n" + "Enter: '1', for rules" + "\n" + "Enter: 2, to play" + "\n" + "Enter: 3, to quit" );
+            Console.WriteLine("Hello " + playersName + "\n" + "Enter: '1', for rules" + "\n" + "Enter: '2', to play" + "\n" + "Enter: '3', to quit" );
             string userInput = Console.ReadLine();
 
-            
-            
             switch (userInput)
             {
                 case "1":
@@ -57,7 +58,7 @@ namespace RobotsVsDinosaurs
 
         public void ReadTheRules()
         {
-            Console.WriteLine("There are no rules!");
+            Console.WriteLine("This is war! There are no rules!");
             MainMenu();
 
         }
@@ -90,11 +91,13 @@ namespace RobotsVsDinosaurs
                 if(dinoDeaths == 3)
                 {
                     Console.WriteLine("The entire herd of dinosaurs are extinct!");
+                    Console.WriteLine("Game Over!");
                     break;
                 }
                 if(robotDeaths == 3)
                 {
                     Console.WriteLine("I guess robots are not the future!");
+                    Console.WriteLine("Game Over!");
                     break;
                 }
 
@@ -102,6 +105,8 @@ namespace RobotsVsDinosaurs
         }
 
        
+            
+        
     }
 
 }

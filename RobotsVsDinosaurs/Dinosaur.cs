@@ -11,7 +11,7 @@ namespace RobotsVsDinosaurs
         public int health;
         public int energy;
         public int attackPower;
-        public int robotDeaths;
+        
 
 
 
@@ -31,13 +31,10 @@ namespace RobotsVsDinosaurs
       
         public void AttackRobot(Robot anyRobot)
         {
-          
-            
+             
                 anyRobot.health = anyRobot.health - 25;
                 anyRobot.powerLevel = anyRobot.powerLevel - 10;
-
-            
-           
+          
 
         }
     }

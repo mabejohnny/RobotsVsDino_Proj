@@ -10,6 +10,7 @@ namespace RobotsVsDinosaurs
     class Weapon
     {
         public string type;
+        
 
 
         //constructor
@@ -17,6 +18,8 @@ namespace RobotsVsDinosaurs
         {
 
             this.type = type;
+            
+
 
         }
 

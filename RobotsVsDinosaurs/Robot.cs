@@ -6,6 +6,7 @@ namespace RobotsVsDinosaurs
 { 
     class Robot
     {    //member variables 
+        
         public string name;
         public int health;
         public int powerLevel;
@@ -23,6 +24,7 @@ namespace RobotsVsDinosaurs
             this.weaponType = weaponType;
             this.attackPower = 100;
 
+
         }
 
 
@@ -35,11 +37,16 @@ namespace RobotsVsDinosaurs
                 anyDino.health = anyDino.health - 25;
                 anyDino.attackPower = anyDino.attackPower - 10;
                 anyDino.energy = anyDino.energy - 10;
+                
 
-           
+
 
         }
 
+     
+
     }
+
+    
 
 }
